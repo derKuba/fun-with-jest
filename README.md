@@ -2,8 +2,8 @@
 
 Kleines Setup zum Ausführen von Typescript und Typescript Tests.
 
+## Installation
 
-## Installatin
 ```
 npm install
 ```

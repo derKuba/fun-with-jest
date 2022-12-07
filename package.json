@@ -4,7 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "jest"
+    "test": "jest",
+    "test:coverage": "jest --coverage"
   },
   "keywords": [],
   "author": "",
@@ -12,5 +13,10 @@
   "devDependencies": {
     "ts-jest": "^29.0.3",
     "ts-node": "^10.9.1"
+  },
+  "dependencies": {
+    "@types/jest": "^29.2.4",
+    "axios": "^1.2.1",
+    "uuid": "^9.0.0"
   }
 }
