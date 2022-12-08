@@ -1,5 +1,6 @@
 import { v4 as uuidv4 } from "uuid";
-import axios from "axios";
+
+import fetch from "node-fetch";
 
 class Fun {
   private id: string = "";
@@ -34,7 +35,18 @@ class Fun {
   }
 
   async fetchCharacter() {
-    return await axios.get(`https://randomuser.me/api/`);
+    const response = await fetch(`https://randomuser.me/api/`, {
+      method: "GET",
+      headers: {
+        Accept: "application/json",
+      },
+    });
+
+    if (response.ok) {
+      return await response.json();
+    }
+
+    return null;
   }
 }
 

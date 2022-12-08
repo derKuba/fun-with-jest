@@ -8,12 +8,21 @@ jest.mock("uuid", () => {
   };
 });
 
-import axios from "axios";
-
 const myPromise = new Promise((resolve, reject) => {
   resolve("kuba");
 });
-axios.get = () => myPromise as any;
+
+jest.mock("node-fetch", () => {
+  const originalModule = jest.requireActual("uuid");
+  return {
+    __esModule: true,
+    ...originalModule,
+    default: () => ({
+      ok: true,
+      json: () => myPromise,
+    }),
+  };
+});
 
 import Fun from "./fun";
 
