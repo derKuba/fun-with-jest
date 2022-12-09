@@ -42,8 +42,7 @@ describe("Fun", () => {
 
   it("should printId", () => {
     const expected = ["odd", "even"];
-    // console.log(fun.printId(), expected.includes(fun.printId()));
-    expect(expected.includes(fun.printId())).toBe(true);
+    expect(expected).toContain(fun.printId());
   });
 
   // https://derkuba.de/content/posts/stenciljs/adress-app-tests-part-iii/
@@ -59,7 +58,7 @@ describe("Fun", () => {
     expect(uuid).toBe("kuba_42");
   });
 
-  it("should make a snapshot", () => {
+  it("should make a snapshot of renderHTML", () => {
     expect(fun.renderHTML({ title: "Jest", name: "jacob" }))
       .toMatchInlineSnapshot(`
 "

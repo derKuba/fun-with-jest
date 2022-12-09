@@ -11,12 +11,13 @@
   "author": "",
   "license": "ISC",
   "devDependencies": {
+    "@types/node-fetch": "^2.6.2",
     "ts-jest": "^29.0.3",
     "ts-node": "^10.9.1"
   },
   "dependencies": {
     "@types/jest": "^29.2.4",
-    "axios": "^1.2.1",
+    "node-fetch": "^2.6.7",
     "uuid": "^9.0.0"
   }
 }
