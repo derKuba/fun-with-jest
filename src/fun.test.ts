@@ -13,7 +13,7 @@ const myPromise = new Promise((resolve, reject) => {
 });
 
 jest.mock("node-fetch", () => {
-  const originalModule = jest.requireActual("uuid");
+  const originalModule = jest.requireActual("node-fetch");
   return {
     __esModule: true,
     ...originalModule,
